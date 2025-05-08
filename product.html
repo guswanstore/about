@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="product-detail">
+    Loading...
+  </div>
+
+  <script>
+    async function loadProduct() {
+      const params = new URLSearchParams(window.location.search);
+      const productId = parseInt(params.get('id'));
+
+      const res = await fetch('products.json');
+      const products = await res.json();
+      const product = products.find(p => p.id === productId);
+
+      if (!product) return document.getElementById('product-detail').innerText = 'Product not found.';
+
+      document.getElementById('product-detail').innerHTML = `
+        <div class="product-container">
+          <img src="${product.image}" alt="${product.title}" class="product-image"/>
+          <div class="product-info">
+            <h1>${product.title}</h1>
+            <h2>${product.price}</h2>
+            <button>Add to Cart</button>
+            <button>Buy Now</button>
+            <ul>
+              ${product.description.map(d => `<li>${d}</li>`).join('')}
+            </ul>
+            <h4>You get the following files:</h4>
+            <ul>
+              ${product.files.map(f => `<li>${f}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+    }
+
+    loadProduct();
+  </script>
+</body>
+</html>

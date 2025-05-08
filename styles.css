@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d14;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .icons span {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .banner-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .profile {
+    margin: 30px auto;
+    text-align: center;
+  }
+  
+  .profile-img {
+    width: 100px;
+    border-radius: 50%;
+  }
+  
+  .profile h1 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+  }
+  
+  .subtitle {
+    font-weight: bold;
+  }
+  
+  .tagline {
+    font-style: italic;
+    color: #ccc;
+  }
+  
+  .description {
+    max-width: 500px;
+    margin: 10px auto;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .software {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .follow-btn {
+    background-color: #00ff88;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+  
+  .products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+  
+  .product {
+    background-color: #1a1a24;
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+  }
+  
+  .product:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .product h3 {
+    margin: 10px 0 5px;
+  }
+  
+  .product p {
+    color: #aaa;
+  }
+  
